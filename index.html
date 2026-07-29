@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEPT - Segurança Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="/assets/images/originalLogo.jpeg" alt="ADEPT Logo" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="whatsapp-btn">Orçamento WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Carousel -->
+    <section class="banner-carousel">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/originalLogo.jpeg" alt="Banner 1">
+                    <div class="banner-text">
+                        <h2>Segurança Eletrônica de Qualidade</h2>
+                        <p>Câmeras, motores e tudo que você precisa para proteger seu lar ou negócio.</p>
+                        <a href="#" class="btn-primary whatsapp-btn">Orçamento WhatsApp</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/darkLogo.jpeg" alt="Banner 2">
+                    <div class="banner-text">
+                        <h2>Instalação Profissional</h2>
+                        <p>Equipe qualificada para instalação e configuração dos seus equipamentos.</p>
+                        <a href="#" class="btn-primary whatsapp-btn">Orçamento WhatsApp</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/originalLogo.jpeg" alt="Banner 3">
+                    <div class="banner-text">
+                        <h2>Acessórios e Componentes</h2>
+                        <p>Cabos, conectores, fontes, brackets e tudo necessário para instalação.</p>
+                        <a href="#" class="btn-primary whatsapp-btn">Orçamento WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Optional navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Segurança Eletrônica de Qualidade para sua Casa ou Empresa</h1>
+            <p>Câmeras de segurança, motores automatizados e todos os componentes necessários para uma instalação perfeita.</p>
+            <a href="#" class="btn-primary whatsapp-btn">Solicitar Orçamento no WhatsApp</a>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/images/darkLogo.jpeg" alt="ADEPT Logo dark" class="hero-logo">
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Nossos Produtos</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="/assets/images/originalLogo.jpeg" alt="Câmeras de Segurança" class="category-icon">
+                <h3>Câmeras de Segurança</h3>
+                <p>Modelos internos e externos, com visão noturna e acesso remoto.</p>
+            </div>
+            <div class="category-card">
+                <img src="/assets/images/darkLogo.jpeg" alt="Motores Automatizados" class="category-icon">
+                <h3>Motores Automatizados</h3>
+                <p>Para portões, persianas e automação residencial.</p>
+            </div>
+            <div class="category-card">
+                <img src="/assets/images/originalLogo.jpeg" alt="Acessórios" class="category-icon">
+                <h3>Acessórios e Componentes</h3>
+                <p>Cabos, conectores, fontes, brackets e tudo necessário para instalação.</p>
+            </div>
+            <div class="category-card">
+                <img src="/assets/images/darkLogo.jpeg" alt="Instalação Profissional" class="category-icon">
+                <h3>Instalação Profissional</h3>
+                <p>Equipe qualificada para instalação e configuração dos seus equipamentos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>Como Funciona</h2>
+        <ol class="steps">
+            <li>
+                <h3>1. Escolha seus produtos</h3>
+                <p>Navegue pelo nosso catálogo ou nos envie suas necessidades via WhatsApp.</p>
+            </li>
+            <li>
+                <h3>2. Receba um orçamento</h3>
+                <p>Nossa equipe prepara um orçamento detalhado sem compromisso.</p>
+            </li>
+            <li>
+                <h3>3. Aprovação e entrega</h3>
+                <p>Após aprovação, entregamos e instalamos no local combinado.</p>
+            </li>
+        </ol>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/assets/images/originalLogo.jpeg" alt="ADEPT Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <h4>Links rápidos</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a></p>
+                <p>E-mail: contato@adept.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ADEPT - Segurança Eletrônica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
