@@ -219,7 +219,7 @@ body {
   display: flex;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  background-color: var(--color-light-bg);
   padding: 4rem 5%;
   gap: 2rem;
 }
@@ -537,48 +537,25 @@ footer {
 /* Swiper navigation buttons */
 .banner-carousel .swiper-button-next,
 .banner-carousel .swiper-button-prev {
-  color: var(--color-neutral-dark);
+  color: var(--color-light-bg);
   opacity: 0.8;
-  transition: all 0.3s;
-  width: 48px;
-  height: 48px;
-  background: rgba(var(--color-dark-bg-rgb), 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  backdrop-filter: blur(2px);
+  transition: opacity 0.3s;
 }
 
 .banner-carousel .swiper-button-next:hover,
 .banner-carousel .swiper-button-prev:hover {
   opacity: 1;
-  background: rgba(var(--color-dark-bg-rgb), 0.4);
-  transform: scale(1.1);
-  color: var(--color-primary);
 }
 
 /* Pagination dots */
 .banner-carousel .swiper-pagination-bullet {
   background: rgba(var(--color-light-bg-rgb), 0.6);
   opacity: 0.8;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  transition: all 0.3s;
-}
-
-.banner-carousel .swiper-pagination-bullet:hover {
-  background: var(--color-primary);
-  transform: scale(1.1);
 }
 
 .banner-carousel .swiper-pagination-bullet-active {
-  background: var(--color-primary);
+  background: var(--color-light-bg);
   opacity: 1;
-  transform: scale(1.2);
 }
 
 /* Responsividade para o carousel */
@@ -596,160 +573,16 @@ footer {
 
 /* Dark Mode */
 body.dark-mode {
-  --color-primary: #4cc9f0;
+  --color-primary: #214066;
   --color-dark-bg: #000000;
-  --color-light-bg: #000000;
-  --color-neutral-dark: #ffffff;
-  --color-secondary-dark: #4cc9f0;
-  --color-secondary-medium: #000;
-  --color-primary-rgb: 76, 201, 240;
+  --color-light-bg: #111111;
+  --color-neutral-dark: #e5eaed;
+  --color-secondary-dark: #ffffff;
+  --color-secondary-medium: #cccccc;
+  --color-primary-rgb: 33, 64, 102;
   --color-dark-bg-rgb: 0, 0, 0;
-  --color-light-bg-rgb: 0, 0, 0;
-  --color-neutral-dark-rgb: 255, 255, 255;
-  --color-secondary-dark-rgb: 247, 37, 133;
-  --color-secondary-medium-rgb: 181, 23, 158;
-}
-
-/* Override backgrounds to be dark */
-body.dark-mode body,
-body.dark-mode .hero,
-body.dark-mode .categories,
-body.dark-mode .how-it-works,
-body.dark-mode footer {
-  background-color: var(--color-dark-bg) !important;
-}
-
-/* Override text colors to be white for most elements */
-body.dark-mode,
-body.dark-mode body,
-body.dark-mode p,
-body.dark-mode li,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode .nav-menu a,
-body.dark-mode .footer-links a,
-body.dark-mode .footer-contact a,
-body.dark-mode .hero-content h1,
-body.dark-mode .hero-content p,
-body.dark-mode .banner-text,
-body.dark-mode .banner-text h2,
-body.dark-mode .banner-text p,
-body.dark-mode .category-card h3,
-body.dark-mode .category-card p,
-body.dark-mode .steps li h3,
-body.dark-mode .steps li p,
-body.dark-mode .footer-contact h4,
-body.dark-mode .footer-links h4,
-body.dark-mode .footer-contact p {
-  color: var(--color-neutral-dark) !important;
-}
-
-/* Link hover colors */
-body.dark-mode .nav-menu a:hover,
-body.dark-mode .footer-links a:hover,
-body.dark-mode .footer-contact a:hover {
-  color: var(--color-primary) !important;
-}
-
-/* Override specific element backgrounds */
-body.dark-mode .navbar {
-  background-color: var(--color-dark-bg) !important;
-}
-
-/* Button styles in dark mode */
-body.dark-mode .btn-primary {
-  background-color: var(--color-primary) !important;
-  color: var(--color-neutral-dark) !important;
-}
-
-body.dark-mode .btn-primary:hover {
-  background-color: var(--color-secondary-dark) !important;
-  color: var(--color-neutral-dark) !important;
-  transform: translateY(-2px);
-}
-
-/* WhatsApp button specific overrides */
-body.dark-mode .whatsapp-btn {
-  background-color: var(--color-primary) !important;
-  color: var(--color-neutral-dark) !important;
-}
-
-body.dark-mode .whatsapp-btn:hover {
-  background-color: var(--color-secondary-dark) !important;
-  color: var(--color-neutral-dark) !important;
-}
-
-/* Card backgrounds - keep light for contrast on dark background */
-body.dark-mode .category-card,
-body.dark-mode .steps li {
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-}
-
-/* Text inside cards should be white on dark card background */
-body.dark-mode .category-card h3,
-body.dark-mode .category-card p,
-body.dark-mode .steps li h3,
-body.dark-mode .steps li p {
-  color: var(--color-neutral-dark) !important;
-}
-
-/* Ensure text inside cards stays readable */
-body.dark-mode .category-card,
-body.dark-mode .steps li {
-  color: var(--color-neutral-dark) !important;
-}
-
-/* Swiper navigation buttons in dark mode */
-body.dark-mode .banner-carousel .swiper-button-next,
-body.dark-mode .banner-carousel .swiper-button-prev {
-  background: rgba(0, 0, 0, 0.3) !important;
-  color: var(--color-neutral-dark) !important;
-}
-
-body.dark-mode .banner-carousel .swiper-button-next:hover,
-body.dark-mode .banner-carousel .swiper-button-prev:hover {
-  background: rgba(0, 0, 0, 0.5) !important;
-  color: var(--color-primary) !important;
-  transform: scale(1.1);
-}
-
-/* Swiper pagination in dark mode */
-body.dark-mode .banner-carousel .swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.3) !important;
-}
-
-body.dark-mode .banner-carousel .swiper-pagination-bullet:hover {
-  background: var(--color-primary) !important;
-  transform: scale(1.1);
-}
-
-body.dark-mode .banner-carousel .swiper-pagination-bullet-active {
-  background: var(--color-primary) !important;
-  opacity: 1 !important;
-  transform: scale(1.2);
-}
-
-/* Carousel overlay */
-body.dark-mode .banner-carousel .swiper-slide::after {
-  background: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Carousel text */
-body.dark-mode .banner-carousel .banner-text {
-  color: var(--color-neutral-dark) !important;
-}
-
-body.dark-mode .banner-carousel .banner-text h2,
-body.dark-mode .banner-carousel .banner-text p {
-  color: var(--color-neutral-dark) !important;
-}
-
-/* Hero section gradient - keep but adjust for dark mode */
-body.dark-mode .hero {
-  background: linear-gradient(135deg, var(--color-dark-bg) 0%, var(--color-secondary-dark) 15%) !important;
+  --color-light-bg-rgb: 17, 17, 17;
+  --color-neutral-dark-rgb: 229, 234, 237;
+  --color-secondary-dark-rgb: 255, 255, 255;
+  --color-secondary-medium-rgb: 204, 204, 204;
 }
