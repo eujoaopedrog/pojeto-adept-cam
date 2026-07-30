@@ -219,7 +219,7 @@ body {
   display: flex;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+  background: var(--color-light-bg);
   padding: 4rem 5%;
   gap: 2rem;
 }
@@ -751,5 +751,13 @@ body.dark-mode .banner-carousel .banner-text p {
 
 /* Hero section gradient - keep but adjust for dark mode */
 body.dark-mode .hero {
-  background: linear-gradient(135deg, var(--color-dark-bg) 0%, var(--color-secondary-dark) 15%) !important;
+  background: var(--color-dark-bg) !important;
+}
+
+body.dark-mode .hero-content h1 {
+  color: var(--color-light-bg) !important;
+}
+
+body.dark-mode .hero-content p {
+  color: var(--color-light-bg) !important;
 }
