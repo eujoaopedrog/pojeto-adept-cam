@@ -108,4 +108,35 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const logoImg = document.querySelector('.logo');
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        // Update logo
+        logoImg.src = isDark ? '/assets/images/darkLogo.jpeg' : '/assets/images/originalLogo.jpeg';
+        // Update button icon
+        const icon = themeToggle.querySelector('.icon');
+        icon.textContent = isDark ? '☀️' : '🌙';
+    });
 });
