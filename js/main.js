@@ -33,13 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
         delay: 0.8
     });
 
-    // Animate category cards on scroll
-    gsap.utils.toArray('.category-card').forEach(card => {
+    // Enhanced category cards animation with stagger
+    gsap.utils.toArray('.category-card').forEach((card, i) => {
         gsap.from(card, {
             opacity: 0,
             y: 40,
+            scale: 0.95,
+            rotation: 2,
             duration: 0.8,
-            ease: 'power2.out',
+            delay: i * 0.08,
+            ease: 'back.out(1.7)',
             scrollTrigger: {
                 trigger: card,
                 start: 'top 85%',
@@ -134,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
         // Update logo
-        logoImg.src = isDark ? '/assets/images/darkLogo.jpeg' : '/assets/images/originalLogo.jpeg';
+        logoImg.src = isDark ? 'assets/images/darkLogo.jpeg' : 'assets/images/originalLogo.jpeg';
         // Update button icon
         const icon = themeToggle.querySelector('.icon');
         icon.textContent = isDark ? '☀️' : '🌙';
