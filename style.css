@@ -443,8 +443,45 @@ footer {
   margin-top: 2rem;
 }
 
+/* Theme toggle button - floating position */
+.theme-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1050; /* Higher than navbar */
+  backdrop-filter: blur(5px);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-secondary-dark);
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
 /* Responsividade adicional */
 @media (max-width: 768px) {
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
