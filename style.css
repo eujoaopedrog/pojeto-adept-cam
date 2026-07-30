@@ -219,14 +219,9 @@ body {
   display: flex;
   align-items: center;
   min-height: 80vh;
-  background: var(--color-light-bg);
+  background: #ffffff;
   padding: 4rem 5%;
   gap: 2rem;
-}
-
-.hero-content {
-  flex: 1;
-  max-width: 600px;
 }
 
 .hero-content h1 {
@@ -240,6 +235,19 @@ body {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   color: var(--color-neutral-dark);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .hero {
+  background: var(--color-dark-bg) !important;
+}
+
+body.dark-mode .hero-content h1 {
+  color: var(--color-light-bg) !important;
+}
+
+body.dark-mode .hero-content p {
+  color: var(--color-light-bg) !important;
 }
 
 .hero-image {
