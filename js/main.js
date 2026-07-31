@@ -112,6 +112,18 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    // Add click function to WhatsApp buttons in carousel using event delegation
+    document.querySelector('.banner-carousel').addEventListener('click', function(e) {
+        const button = e.target.closest('.whatsapp-btn');
+        if (button) {
+            // Prevent default link behavior
+            e.preventDefault();
+            // Redirect to WhatsApp
+            const whatsappUrl = 'https://wa.me/5511999999999';
+            window.location.href = whatsappUrl;
+        }
+    });
+
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -134,12 +146,83 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoImg = document.querySelector('.logo');
 
     themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        // Update logo
-        logoImg.src = isDark ? 'assets/images/darkLogo.jpeg' : 'assets/images/originalLogo.jpeg';
-        // Update button icon
-        const icon = themeToggle.querySelector('.icon');
-        icon.textContent = isDark ? '☀️' : '🌙';
+        // Add loading state
+        themeToggle.classList.add('theme-toggle-loading');
+
+        // Simulate a short delay for the loading animation
+        setTimeout(() => {
+            // Toggle dark mode
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+
+            // Update logo
+            logoImg.src = isDark ? 'assets/images/darkLogo.jpeg' : 'assets/images/originalLogo.jpeg';
+
+            // Update button icon
+            const icon = themeToggle.querySelector('.icon');
+            icon.textContent = isDark ? '☀️' : '🌙';
+
+            // Remove loading state
+            themeToggle.classList.remove('theme-toggle-loading');
+        }, 500); // 500ms delay for loading animation
+    });
+
+    // Initialize Locomotive Scroll for smooth parallax effects
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        multiplier: 1,
+        class: 'is-reveal',
+        resetNativeScroll: false,
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        lerp: 0.1,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
+    });
+
+    // Update ScrollTrigger with Locomotive Scroll
+    gsap.ticker.add((time)=>{
+        ScrollTrigger.update();
+    });
+
+    // Tell ScrollLocator to use proxy scroll behavior
+    ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+        scrollTop(value) {
+            return arguments.length ? scroll.scrollTo(value, 0, 0) : scroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+        }
+    });
+
+    // Update Locomotive Scroll when ScrollTrigger updates
+    ScrollTrigger.addEventListener("refresh", () => scroll.update());
+
+    // Initialize ScrollTrigger after setting up the proxy
+    ScrollTrigger.refresh();
+
+    // Initialize VanillaTilt for 3D effect on cards
+    VanillaTilt.init(document.querySelectorAll(".category-card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+    });
+
+    // Initialize Particles.js for background effect
+    if (document.getElementById('particles-js')) {
+        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json', function() {
+            console.log('Particles.js loaded');
+        });
+    }
+
+    // Update Locomotive Scroll on resize
+    window.addEventListener('resize', () => {
+        scroll.update();
     });
 });

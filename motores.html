@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motores Automatizados - ADEPT</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Lenis (smooth scrolling) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@studiofreight/lenis@1.0.42/dist/lenis.css"/>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="assets/images/originalLogo.jpeg" alt="ADEPT Logo" class="logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#categories" class="active">Produtos</a></li>
+                <li><a href="index.html#how-it-works">Como Funciona</a></li>
+                <li><a href="index.html#footer">Contato</a></li>
+                <li><a href="#" class="whatsapp-btn">Orçamento WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('assets/images/teste2.png');">
+        <div class="hero-content">
+            <h1 class="fade-in-up">Automação residencial e comercial</h1>
+            <p class="fade-in-up">Conforto, segurança e praticidade com nossos motores de alta performance.</p>
+            <a href="#" class="btn-primary whatsapp-btn fade-in-up">Solicitar Orçamento no WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section style="padding: 4rem 5%; background-color: var(--color-light-bg);">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="color: var(--color-dark-bg); margin-bottom: 3rem; font-size: 2.5rem;">Por que escolher nossos motores?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--color-primary);">⚙️</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Silenciosos e Potentes</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Tecnologia de última geração que garante operação praticamente silenciosa com torque excepcional para portões pesados.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--color-primary);">⏱️</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Tempo de Resposta Rápido</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Abertura e fechamento em segundos, com sistemas de frenagem suave que evitam impactos e aumentam a vida útil.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--color-primary);">🔋</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Baixo Consumo Energético</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Motores eficientes que consomem mínima energia em standby e operação otimizada durante o uso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Types Section -->
+    <section style="padding: 4rem 5%; background-color: var(--color-background-alt);">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="color: var(--color-dark-bg); margin-bottom: 3rem; font-size: 2.5rem;">Tipos de Motores Disponíveis</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;">🚪</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Portões de Giro</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Ideal para portões residenciais de abertura tradicional com braçadeira ou cremalheira.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;">🚧</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Portões de Correr</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Perfeito para áreas com espaço limitado lateralmente, com movimento suave ao longo de trilho.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;">🪟</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Persianas e Cortinas</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Automação para controle de luminosidade e privacidade com operação silenciosa e programável.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.5rem; text-align: center;">🚗</div>
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1rem;">Garagens e Elevadores</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Soluções robustas para portões de garagem comerciais e residenciais de uso intenso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Integration Section -->
+    <section style="padding: 4rem 5%; background-color: var(--color-light-bg);">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: var(--color-dark-bg); text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Integração com Sistemas Inteligentes</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1.5rem;">Controle por App</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Abra e feche seu portão de qualquer lugar através do aplicativo móvel dedicado.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1.5rem;">Integração com Assistentes</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Compatível com Alexa, Google Home e Siri para controle por voz.</p>
+                </div>
+                <div style="background: white; border-radius: var(--border-radius-lg); padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h3 style="color: var(--color-dark-bg); margin-bottom: 1.5rem;">Agendamento e Automação</h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">Programar horários específicos de abertura/fechamento ou integrar com sensores de presença.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="padding: 4rem 5%; text-align: center; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: white;">
+        <h2 style="margin-bottom: 2rem; font-size: 2.25rem;">Modernize seu acesso hoje!</h2>
+        <p style="font-size: 1.25rem; margin-bottom: 3rem; opacity: 0.9;">Nossos especialistas em automação vão ajudá-lo a escolher a solução perfeita para seu portão, garagem ou persianas.</p>
+        <a href="#" class="btn-primary" style="background: white; color: var(--color-primary); font-weight: 600; padding: 1.25rem 2.5rem; font-size: 1.125rem;">
+            Solicite Seu Orçamento
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/originalLogo.jpeg" alt="ADEPT Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <h4>Links rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#categories">Produtos</a></li>
+                    <li><a href="index.html#how-it-works">Como Funciona</a></li>
+                    <li><a href="index.html#footer">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>WhatsApp: <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a></p>
+                <p>E-mail: contato@adept.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ADEPT - Segurança Eletrônica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Lenis (smooth scrolling) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studiofreight/lenis@1.0.42/dist/lenis.bundle.min.js"></script>
+    <!-- VanillaTilt (3D tilt effect) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- Theme toggle button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo claro/escuro"><span class="icon">🌙</span></button>
+</body>
+</html>

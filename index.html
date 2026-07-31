@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Locomotive Scroll (advanced smooth scrolling) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"/>
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
-<body>
+<body data-scroll-container>
+    <div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></div>
     <header>
         <nav class="navbar">
             <div class="logo-container">
@@ -41,7 +44,7 @@
                     <div class="banner-text">
                         <h2>Segurança Eletrônica de Qualidade</h2>
                         <p>Câmeras, motores e tudo que você precisa para proteger seu lar ou negócio.</p>
-                        <a href="#" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
+                        <a href="https://wa.me/5511999999999" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -49,7 +52,7 @@
                     <div class="banner-text">
                         <h2>Instalação Profissional</h2>
                         <p>Equipe qualificada para instalação e configuração dos seus equipamentos.</p>
-                        <a href="#" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
+                        <a href="https://wa.me/5511999999999" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -57,7 +60,7 @@
                     <div class="banner-text">
                         <h2>Acessórios e Componentes</h2>
                         <p>Cabos, conectores, fontes, brackets e tudo necessário para instalação.</p>
-                        <a href="#" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
+                        <a href="https://wa.me/5511999999999" class="btn-primary whatsapp-btn">Faça seu orçamento</a>
                     </div>
                 </div>
             </div>
@@ -79,26 +82,34 @@
     <section class="categories">
         <h2>Nossos Produtos</h2>
         <div class="categories-grid">
-            <div class="category-card">
-                <img src="assets/images/originalLogo.jpeg" alt="Câmeras de Segurança" class="category-icon">
-                <h3>Câmeras de Segurança</h3>
-                <p>Modelos internos e externos, com visão noturna e acesso remoto.</p>
-            </div>
-            <div class="category-card">
-                <img src="assets/images/darkLogo.jpeg" alt="Motores Automatizados" class="category-icon">
-                <h3>Motores Automatizados</h3>
-                <p>Para portões, persianas e automação residencial.</p>
-            </div>
-            <div class="category-card">
-                <img src="assets/images/originalLogo.jpeg" alt="Acessórios" class="category-icon">
-                <h3>Acessórios e Componentes</h3>
-                <p>Cabos, conectores, fontes, brackets e tudo necessário para instalação.</p>
-            </div>
-            <div class="category-card">
-                <img src="assets/images/originalLogo.jpeg" alt="Instalação Profissional" class="category-icon">
-                <h3>Instalação Profissional</h3>
-                <p>Equipe qualificada para instalação e configuração dos seus equipamentos.</p>
-            </div>
+            <a href="cameras.html" class="category-card-link">
+                <div class="category-card">
+                    <img src="assets/images/originalLogo.jpeg" alt="Câmeras de Segurança" class="category-icon">
+                    <h3>Câmeras de Segurança</h3>
+                    <p>Modelos internos e externos, com visão noturna e acesso remoto.</p>
+                </div>
+            </a>
+            <a href="motores.html" class="category-card-link">
+                <div class="category-card">
+                    <img src="assets/images/darkLogo.jpeg" alt="Motores Automatizados" class="category-icon">
+                    <h3>Motores Automatizados</h3>
+                    <p>Para portões, persianas e automação residencial.</p>
+                </div>
+            </a>
+            <a href="acessorios.html" class="category-card-link">
+                <div class="category-card">
+                    <img src="assets/images/originalLogo.jpeg" alt="Acessórios" class="category-icon">
+                    <h3>Acessórios e Componentes</h3>
+                    <p>Cabos, conectores, fontes, brackets e tudo necessário para instalação.</p>
+                </div>
+            </a>
+            <a href="instalacao.html" class="category-card-link">
+                <div class="category-card">
+                    <img src="assets/images/originalLogo.jpeg" alt="Instalação Profissional" class="category-icon">
+                    <h3>Instalação Profissional</h3>
+                    <p>Equipe qualificada para instalação e configuração dos seus equipamentos.</p>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -147,6 +158,12 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Locomotive Scroll (advanced smooth scrolling) -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.esm.js"></script>
+    <!-- Particles.js (background particle effects) -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- VanillaTilt (3D tilt effect) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
     <!-- Theme toggle button -->
